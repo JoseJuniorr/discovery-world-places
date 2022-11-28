@@ -1,8 +1,13 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {
+  MapContainer as LeafletMap,
+  TileLayer,
+  Marker,
+  Popup
+} from 'react-leaflet';
 
 const Map = () => {
   return (
-    <MapContainer
+    <LeafletMap
       center={[0, 0]}
       zoom={3}
       style={{ height: '100vh', width: '100%' }}
@@ -16,7 +21,7 @@ const Map = () => {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
-    </MapContainer>
+    </LeafletMap>
   );
 };
 
