@@ -7,5 +7,4 @@ describe('<Map />', () => {
 
     screen.logTestingPlaygroundURL();
   });
-  //   it('should render with the marker in corret place ', () => {});
 });
