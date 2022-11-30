@@ -1,5 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import LinkWrapper from 'components/LinkWrapper';
+import { InfoOutline } from '@styled-icons/evaicons-outline';
 
 const Map = dynamic(() => import('components/Map'), { ssr: false });
 
@@ -16,7 +18,14 @@ const places = [
 ];
 
 const HomePage = () => {
-  return <Map places={places} />;
+  return (
+    <>
+      <LinkWrapper href="/about">
+        <InfoOutline size={32} aria-label="About" />
+      </LinkWrapper>
+      <Map places={places} />
+    </>
+  );
 };
 
 export default HomePage;
