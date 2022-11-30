@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/evaicons-outline": "^10.46.0",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
     "eslint-plugin-react": "7.31.10",

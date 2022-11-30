@@ -15,7 +15,6 @@ export type MapProps = {
 };
 
 const Map = ({ places }: MapProps) => {
-  console.log(places);
   const renderMarker = ({ id, name, location }) => {
     const { latitude, longitude } = location;
     return (
