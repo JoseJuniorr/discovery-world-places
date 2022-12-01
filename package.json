@@ -17,10 +17,12 @@
     ]
   },
   "dependencies": {
-    "@styled-icons/evaicons-outline": "^10.46.0",
+    "@styled-icons/evaicons-outline": "10.46.0",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
     "eslint-plugin-react": "7.31.10",
+    "graphql": "16.6.0",
+    "graphql-request": "5.0.0",
     "husky": "8.0.1",
     "leaflet": "1.7.1",
     "next": "13.0.0",

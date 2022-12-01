@@ -2,7 +2,9 @@ import { CloseOutline } from '@styled-icons/evaicons-outline';
 import LinkWrapper from 'components/LinkWrapper';
 import * as S from './styles';
 
-const About = () => {
+const About = ({ pagesData }) => {
+  console.log({ pagesData });
+
   return (
     <div>
       <LinkWrapper href="/">
