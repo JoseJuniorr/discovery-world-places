@@ -1,23 +1,12 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
+import { InfoOutline } from '@styled-icons/evaicons-outline/InfoOutline';
+
 import LinkWrapper from 'components/LinkWrapper';
-import { InfoOutline } from '@styled-icons/evaicons-outline';
+import { MapProps } from 'components/Map';
 
 const Map = dynamic(() => import('components/Map'), { ssr: false });
 
-const places = [
-  {
-    id: '2',
-    name: 'Campo Mourão',
-    slug: 'campo-mourao',
-    location: {
-      latitude: -24.042706,
-      longitude: -52.4262779
-    }
-  }
-];
-
-const HomePage = () => {
+const HomeTemplate = ({ places }: MapProps) => {
   return (
     <>
       <LinkWrapper href="/about">
@@ -28,4 +17,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomeTemplate;

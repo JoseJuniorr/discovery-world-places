@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.section`
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,8 +9,6 @@ export const Content = styled.section`
   height: 100vh;
   max-width: var(--container);
   margin: auto;
-  text-align: center;
-  padding: 20px;
 `;
 
 export const Heading = styled.h1`
@@ -17,14 +16,11 @@ export const Heading = styled.h1`
   margin-bottom: var(--large);
 `;
 
-export const BodyContainer = styled.div`
-  max-width: 700px;
-`;
-
-export const Body = styled.p`
-  text-align: center;
-
-  a {
-    text-decoration: none;
+export const Body = styled.div`
+  // serve para estilos do body
+  // p, a, ul, li, blockquote
+  p {
+    font-size: 2rem;
+    line-height: 1.5;
   }
 `;
