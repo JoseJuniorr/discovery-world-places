@@ -16,7 +16,6 @@ export type PlacesTemplateProps = {
 };
 
 const PlacesTemplate = ({ place }: PlacesTemplateProps) => {
-  console.log({ place });
   return (
     <div>
       <h1>{place.name}</h1>
