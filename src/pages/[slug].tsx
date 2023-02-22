@@ -1,3 +1,4 @@
+import { GetPageBySlugQuery, PagesQuery } from 'gql/graphql';
 import client from 'graphql/client';
 import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries';
 import { GetStaticProps } from 'next';
@@ -13,7 +14,7 @@ export default function Page({ heading, body }) {
 }
 
 export const getStaticPaths = async () => {
-  const { pages } = await client.request(GET_PAGES, { first: 3 });
+  const { pages } = await client.request<PagesQuery>(GET_PAGES, { first: 3 });
 
   const paths = pages.map(({ slug }) => ({
     params: { slug }
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { page } = await client.request(GET_PAGE_BY_SLUG, {
+  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
     slug: `${params?.slug}`
   });
 
