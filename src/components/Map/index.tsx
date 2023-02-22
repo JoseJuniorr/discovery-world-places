@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { MapContainer as LeafletMap, Marker } from 'react-leaflet';
+import { MapContainer as LeafletMap, Marker, TileLayer } from 'react-leaflet';
 
 type Place = {
   id: string;
@@ -20,6 +20,7 @@ const Map = ({ places }: MapProps) => {
 
   const renderMarker = ({ id, name, location, slug }) => {
     const { latitude, longitude } = location;
+
     return (
       <Marker
         key={`place-${id}`}
@@ -41,6 +42,10 @@ const Map = ({ places }: MapProps) => {
       style={{ height: '100vh', width: '100%' }}
     >
       {places?.map(renderMarker)}
+      <TileLayer
+        attribution="Hello"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
     </LeafletMap>
   );
 };
