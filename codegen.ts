@@ -8,7 +8,13 @@ const config: CodegenConfig = {
   generates: {
     'src/gql/': {
       preset: 'client',
-      plugins: []
+      plugins: [
+        {
+          add: {
+            content: '/* eslint-disable */'
+          }
+        }
+      ]
     }
   }
 };
